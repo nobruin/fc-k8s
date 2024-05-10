@@ -1,11 +1,12 @@
 package main
+
 import "net/http"
 
-func main(){
+func main() {
 	http.HandleFunc("/", Hello)
 	http.ListenAndServe(":8080", nil)
 }
 
-func Hello(w http.ResponseWriter,r *http.Request){
-	w.Write([]byte("<h1>Hello World</h1>"))
+func Hello(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("<h1>Hello World!!!</h1>"))
 }
