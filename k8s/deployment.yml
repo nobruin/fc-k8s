@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata:
   name: goserver
   labels:
@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "brunomarins/hello-go:v2"
+          image: "brunomarins/hello-go:v3"
