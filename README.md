@@ -19,4 +19,14 @@ Principais Aspectos do Projeto:
 
 Com este projeto, espero fornecer uma base sólida para que os estudaantes possam começar a explorar e compreender o funcionamento do Kubernetes.
 
+Para melhor conhecimento dos componentes:
 
+[Cluters](doc/cluster.md)
+[nodes](doc/nodes.md)
+[pods](doc/pods.md)
+[replicasets](doc/replicasets.md)
+[deployments](doc/deployments.md)
+[services](doc/services.md  )
+
+Segue a imagem da arquitetura (meramente informativa) da arch do kubernetes:
+![Exemplo de Imagem](assets/img/1.png)
