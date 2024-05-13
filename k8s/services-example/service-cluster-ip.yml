@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: goserver-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: goserver  
   ports:
