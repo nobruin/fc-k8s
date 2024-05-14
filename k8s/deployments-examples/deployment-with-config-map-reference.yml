@@ -25,9 +25,7 @@ spec:
             limits:
               cpu: "0.05"
               memory: 25Mi
-              
-          env: 
-            - name: ENV1
-              value: "example-deploy-file-ENV1"
-            - name: ENV2
-              value: "example-deploy-file-ENV2"
+
+          envFrom:
+            - configMapRef:
+                name: goserver-env          

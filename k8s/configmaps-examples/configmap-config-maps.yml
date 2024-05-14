@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: goserver-env
 data:
-  ENV1: "ENV1"
-  ENV2: "ENV2"
+  ENV1: "Example-map-Env1"
+  ENV2: "Example-map-Env2"
