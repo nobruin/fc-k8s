@@ -1,6 +1,10 @@
 package main
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+	"os"
+)
 
 func main() {
 	http.HandleFunc("/", Hello)
@@ -8,5 +12,11 @@ func main() {
 }
 
 func Hello(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("<h1>Hello Sa Treta!!!</h1>"))
+	envVarEx1 := os.Getenv("ENV1")
+	envVarEx2 := os.Getenv("ENV2")
+	w.Write([]byte("<h1>Hello People!!!</h1>"))
+
+	w.Write([]byte("<h1>This is an example of using environment variables</h1>"))
+
+	fmt.Fprintf(w, "Env1 %s and Env2 %s!!!", envVarEx1, envVarEx2)
 }
