@@ -15,7 +15,7 @@ Escolha a ferramenta que melhor se adapta às suas necessidades e siga as instru
 
 Para instruções detalhadas sobre como instalar o Kubernetes, consulte a [documentação oficial do Kubernetes](https://kubernetes.io/docs/setup/).
 
-
+# Comandos basicos do kubernetes:
 
 Durante o desenvolvimento e implantação do servidor Golang no Kubernetes, você encontrará alguns comandos essenciais que ajudarão na configuração, gerenciamento e depuração do ambiente. Abaixo estão os principais comandos que você provavelmente utilizará:
 

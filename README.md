@@ -2,7 +2,7 @@
 
 Este projeto oferece uma introdução à configuração básica do Kubernetes, ideal para iniciantes interessados em entender os fundamentos deste sistema de orquestração de contêineres. Abordaremos conceitos essenciais e forneceremos exemplos simples para demonstrar como o Kubernetes funciona no contexto de servidores Linux.
 
-## Objetivos do Projeto:
+## Objetivos do Projeto
 
 1. **Configuração Básica**: Exploraremos os conceitos básicos de configuração do Kubernetes, incluindo a criação de pods, serviços e deployments.
 
@@ -17,6 +17,7 @@ Com este projeto, espero fornecer uma base sólida para que os estudantes possam
 Para melhor conhecimento dos componentes:
 
 - [Projeto](doc/projeto.md)
+- [Como Usar](doc/como_ultilizar.md)
 - [Clusters](doc/cluster.md)
 - [Nodes](doc/nodes.md)
 - [Pods](doc/pods.md)
