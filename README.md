@@ -8,7 +8,7 @@ Este projeto oferece uma introdução à configuração básica do Kubernetes, i
 
 2. **Exemplos Demonstrativos**: Apresentaremos exemplos simples para ilustrar como configurar e implantar aplicativos usando o Kubernetes.
 
-3. **Documentação Simplificada**: Ofereceremos uma documentação clara e concisa para guiar os usuários através do processo de configuração, facilitando o entendimento dos passos necessários.
+3. **Documentação Simplificada**: Ofereceremos uma documentação simplificada com o objetivo de guiar os usuários através do processo de configuração, facilitando o entendimento dos passos necessários.
 
 4. **Feedback**: Gostaríamos de receber feedback dos usuários, para melhoria e aprendizado.
 
