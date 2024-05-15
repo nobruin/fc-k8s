@@ -10,6 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/", Hello)
 	http.HandleFunc("/config", ConfigMap)
+	http.HandleFunc("/secrets", Secrets)
 	http.ListenAndServe(":80", nil)
 }
 
@@ -18,7 +19,7 @@ func Hello(w http.ResponseWriter, r *http.Request) {
 	envVarEx2 := os.Getenv("ENV2")
 	w.Write([]byte("<h1>Hello People!!!</h1>"))
 
-	w.Write([]byte("<h1>This is an example of using environment variables</h1>"))
+	fmt.Fprintf(w, "This is an example of using environment variables")
 
 	fmt.Fprintf(w, "Env1 %s and Env2 %s!!!", envVarEx1, envVarEx2)
 }
@@ -31,4 +32,12 @@ func ConfigMap(w http.ResponseWriter, r *http.Request) {
 	}
 
 	fmt.Fprintf(w, "Configs: %s ", string(data))
+}
+
+func Secrets(w http.ResponseWriter, r *http.Request) {
+	user := os.Getenv("USER")
+	password := os.Getenv("PASSWORD")
+
+	fmt.Fprintf(w, "This is an example of using secrets on Kubernetes")
+	fmt.Fprintf(w, "User %s and Password %s!!!", user, password)
 }

@@ -25,5 +25,7 @@ Para melhor conhecimento dos componentes:
 - [Deployments](doc/deployments.md)
 - [Services](doc/services.md)
 
+[Sobre health check com kubernetes](doc/health_check/health_check.md)
+
 Segue a imagem da arquitetura (meramente informativa) da arquitetura do Kubernetes:
 ![Exemplo de Imagem](assets/img/1.png)

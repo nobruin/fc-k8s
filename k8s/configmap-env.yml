@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: goserver-env
+data:
+  ENV1: "Example-map-Env1"
+  ENV2: "Example-map-Env2"  
