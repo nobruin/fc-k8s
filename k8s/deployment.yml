@@ -16,7 +16,10 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "brunomarins/hello-go:v5"
+          image: "brunomarins/hello-go:v2.1"
+          volumeMounts:
+            - mountPath: "/config"
+              name: config-volume
 
           resources:
             requests: 
@@ -25,3 +28,16 @@ spec:
             limits:
               cpu: "0.05"
               memory: 25Mi
+
+          envFrom:
+            - configMapRef:
+                name: goserver-env                
+            - secretRef:
+                name: goserver-secret
+      volumes:
+        - name: config-volume        
+          configMap:
+            name: goserver-config-volume
+            items:
+            - key: config
+              path: "config.txt"
