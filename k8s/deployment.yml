@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "brunomarins/hello-go:v2.1"
+          image: "brunomarins/hello-go:v2.4"
           volumeMounts:
             - mountPath: "/config"
               name: config-volume

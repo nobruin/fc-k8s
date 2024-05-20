@@ -5,9 +5,13 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 )
 
+var statedAt = time.Now()
+
 func main() {
+	http.HandleFunc("/healthz", Healthz)
 	http.HandleFunc("/", Hello)
 	http.HandleFunc("/config", ConfigMap)
 	http.HandleFunc("/secrets", Secrets)
@@ -40,4 +44,18 @@ func Secrets(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Fprintf(w, "This is an example of using secrets on Kubernetes")
 	fmt.Fprintf(w, "User %s and Password %s!!!", user, password)
+}
+
+func Healthz(w http.ResponseWriter, r *http.Request) {
+	duration := time.Since(statedAt)
+
+	if duration.Seconds() > 25 {
+		w.WriteHeader(500)
+		w.Write([]byte(fmt.Sprintf("Duration: %v", duration.Seconds())))
+		return
+	}
+
+	w.WriteHeader(200)
+	w.Write([]byte("ok"))
+
 }
