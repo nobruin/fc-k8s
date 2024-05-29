@@ -8,6 +8,6 @@ spec:
     app: goserver  
   ports:
   - name: goserver-service
-    port: 8080 # service pod
+    port: 8000 # service pod
     targetPort: 80 # pod port
     protocol: TCP
