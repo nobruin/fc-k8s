@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "wesleywillians/hello-go:v9.6"        
+          image: "brunomarins/hello-go:v2.6"        
 
           resources:
             requests:
@@ -46,6 +46,8 @@ spec:
           volumeMounts:
             - mountPath: "/config"
               name: config-volume
+            - mountPath: "/data"
+              name: goserver-pvc
               
           envFrom:
             - configMapRef:
@@ -53,6 +55,9 @@ spec:
             - secretRef:
                 name: goserver-secret
       volumes:
+        - name: goserver-pvc
+          persistentVolumeClaim:
+            claimName: goserver-pvc
         - name: config-volume        
           configMap:
             name: goserver-config-volume
